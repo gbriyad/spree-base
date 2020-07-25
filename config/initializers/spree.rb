@@ -32,3 +32,4 @@ end
 
 
 Spree.user_class = "Spree::User"
+Spree::Auth::Config[:confirmable] = true
