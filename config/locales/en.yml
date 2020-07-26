@@ -30,4 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  devise:
+    confirmation:
+      did_not_received_confirmation: Didn't receive confirmation e-mail?
+      resend_confirmation_email: Resend confirmation email
+      resend: Resend
