@@ -1,0 +1,24 @@
+<%= render partial: 'spree/shared/error_messages', locals: { target: resource } %>
+<div class="container email-confirmation">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="mb-3">
+        <div class="col-lg-11 mx-auto">
+          <h3 class="spree-mb-large spree-mt-large spree-header"><%= 'Resend confirmation mail' %></h3>
+          <%= form_for(resource, as: resource_name, url: spree_user_confirmation_path, html: { method: :post }) do |f| %>
+            <div id="password-credentials" class="mb-4">
+              <div class="form-group mb-4">
+                <p class="form-group checkout-content-inner-field">
+                  <%= f.email_field :email, class: 'spree-flat-input', placeholder: Spree.t(:email), autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+                </p>
+              </div>
+            </div>
+            <%= f.submit 'Resend', class: 'btn btn-primary btn-block spree-btn mt-2', tabindex: 4 %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
