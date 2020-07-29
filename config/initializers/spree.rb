@@ -18,7 +18,7 @@ Spree.config do |config|
   config.logo = 'ecommerce-logo.png'
   config.admin_interface_logo = 'ecommerce-logo.png'
   config.currency = 'BDT'
-  config.default_country_id = Spree::Country.find_by_iso('BD').id
+  config.default_country_id = Spree::Country.find_by_iso('BD')&.id  if ActiveRecord::Base.connection.table_exists? 'spree_countries'
 
 end
 
