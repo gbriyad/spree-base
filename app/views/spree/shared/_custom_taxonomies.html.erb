@@ -1,0 +1,39 @@
+<% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
+<nav id="custom_taxonomies" class="navbar navbar-expand-lg mt-2">
+  <%# show only the 1st positioned taxonomy %>
+  <% if @taxonomies.size > 0  && taxonomy = @taxonomies.find_by(position: 1)%>
+    <% taxonomy.root.children.each do |level_1| %>
+      <% cache [I18n.locale, level_1] do %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown multi-level-dropdown">
+            <% if level_1.children.size > 0 %>
+              <%= link_to level_1.name, seo_url(level_1), class: "nav-link dropdown-toggle w-100"%>
+              <ul class="dropdown-menu mt-0 border-0">
+                <% level_1.children.each do |level_2|%>
+                  <% if level_2.children.size > 0 %>
+                    <li class="dropdown-item dropdown-submenu">
+                      <%= link_to level_2.name, seo_url(level_2), class: "dropdown-toggle w-100"%>
+                      <ul class="dropdown-menu mr-2 r-100 ">
+                        <% level_2.children.each do |level_3| %>
+                          <li class="dropdown-item">
+                            <%= link_to(level_3.name, seo_url(level_3), class: "w-100") %>
+                          </li>
+                        <% end %>
+                      </ul>
+                    </li>
+                  <% else %>
+                    <li class="dropdown-item">
+                      <%= link_to(level_2.name, seo_url(level_2), class: "w-100") %>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            <% else %>
+              <%= link_to level_1.name, seo_url(level_1), class: "nav-link w-100"%>
+            <% end %>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
+</nav>
