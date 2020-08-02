@@ -35,3 +35,12 @@ en:
       did_not_received_confirmation: Didn't receive confirmation e-mail?
       resend_confirmation_email: Resend confirmation email
       resend: Resend
+  spree:
+    order_mailer:
+      store_owner_notification_email:
+        heading: New Order Received
+        instructions: You have received a new order.
+        order_summary: Order %{number} Summary
+        subject: '%{store_name} received a new order'
+        dear_owner: Dear Owner,
+        check_order: Check your order in the Admin Order section.
