@@ -37,4 +37,4 @@ end
 Spree.user_class = "Spree::User"
 Spree::Auth::Config[:confirmable] = true
 
-Spree::PrintInvoice::Config.set(font_face: 'DejaVuSans') # Default: false
+Spree::PrintInvoice::Config.set(font_face: 'DejaVuSans', page_layout: 'portrait', store_pdf: false)
