@@ -38,7 +38,6 @@ gem 'spree', '~> 4.1'
 gem 'spree_auth_devise', '~> 4.1'
 gem 'spree_gateway', '~> 3.7'
 
-gem 'spree_print_invoice', github: 'spree-contrib/spree_print_invoice', branch: 'master'
 gem 'spree_html_invoice', git: 'https://github.com/gbriyad/spree-html-invoice', branch: '4_1_stable'
 
 

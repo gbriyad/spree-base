@@ -37,5 +37,4 @@ end
 Spree.user_class = "Spree::User"
 Spree::Auth::Config[:confirmable] = true
 
-Spree::PrintInvoice::Config.set(font_face: 'DejaVuSans', page_layout: 'portrait', store_pdf: false)
 Spree::HtmlInvoice::Config.set(print_buttons: "invoice")  #comma separated list (invoice,packaging_slip,reminder,receipt)
