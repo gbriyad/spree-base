@@ -26,6 +26,11 @@
   } do |f| %>
   <div id="inside-product-cart-form" data-hook="inside_product_cart_form">
     <% if is_product_available_in_currency %>
+      <% if default_variant.on_sale? %>
+        <div class="text-center text-md-left">
+          <del class="product-component-original-price"><%= Spree::Money.new(default_variant.original_price, currency: current_currency) %></del>
+        </div>
+      <% end %>
       <div id="product-price" class="mb-2 text-center text-md-left add-to-cart-form-price" data-hook="product_price">
         <span class="price selling" content="<%= @product_price.to_d %>">
           <%= display_price(default_variant) %>

@@ -6,6 +6,18 @@ GIT
     spree_html_invoice (4.1)
       spree_core
 
+GIT
+  remote: https://github.com/gbriyad/spree_sales.git
+  revision: 70360a1a4de095ddec19eb4b457e1da9196ef00a
+  branch: 4-0-stable
+  specs:
+    spree_sales (4.0.0)
+      date_validator
+      spree_backend (>= 4.0, < 4.9.0)
+      spree_core (>= 4.0, < 4.9.0)
+      spree_extension
+      spree_frontend (>= 4.0, < 4.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -107,6 +119,9 @@ GEM
     crass (1.0.6)
     css_parser (1.7.1)
       addressable
+    date_validator (0.10.0)
+      activemodel (>= 3)
+      activesupport (>= 3)
     deface (1.5.3)
       nokogiri (>= 1.6)
       polyglot
@@ -421,6 +436,7 @@ DEPENDENCIES
   spree_auth_devise (~> 4.1)
   spree_gateway (~> 3.7)
   spree_html_invoice!
+  spree_sales!
   spring
   spring-watcher-listen (~> 2.0.0)
   tawk_rails

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_101101) do
+ActiveRecord::Schema.define(version: 2020_08_04_151060) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -131,19 +131,6 @@ ActiveRecord::Schema.define(version: 2020_07_31_101101) do
     t.index ["position"], name: "index_spree_assets_on_position"
     t.index ["viewable_id"], name: "index_assets_on_viewable_id"
     t.index ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
-  end
-
-  create_table "spree_bookkeeping_documents", id: :serial, force: :cascade do |t|
-    t.string "printable_type"
-    t.integer "printable_id"
-    t.string "template"
-    t.string "number"
-    t.string "firstname"
-    t.string "lastname"
-    t.string "email"
-    t.decimal "total", precision: 12, scale: 2
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "spree_calculators", id: :serial, force: :cascade do |t|
@@ -754,6 +741,19 @@ ActiveRecord::Schema.define(version: 2020_07_31_101101) do
   create_table "spree_roles", id: :serial, force: :cascade do |t|
     t.string "name"
     t.index "lower((name)::text)", name: "index_spree_roles_on_lower_name", unique: true
+  end
+
+  create_table "spree_sale_prices", id: :serial, force: :cascade do |t|
+    t.integer "price_id"
+    t.float "value"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.boolean "enabled"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["price_id", "start_at", "end_at", "enabled"], name: "index_active_sale_prices_for_price"
+    t.index ["price_id"], name: "index_sale_prices_for_price"
+    t.index ["start_at", "end_at", "enabled"], name: "index_active_sale_prices_for_all_variants"
   end
 
   create_table "spree_shipments", id: :serial, force: :cascade do |t|

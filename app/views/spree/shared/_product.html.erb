@@ -6,7 +6,11 @@
       <div class="product-component-name" title="<%= product.name %>">
         <%= product.name %>
       </div>
-      <div class="product-component-price"><%= display_price(product) %></div>
+      <div class="product-component-price"><%= display_price(product) %>
+        <% if product.on_sale? %>
+          <del class="product-component-original-price"><%= Spree::Money.new(product.original_price, currency: current_currency) %></del>
+        <% end %>
+      </div>
     </div>
   <% end %>
 <% end %>
