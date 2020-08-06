@@ -7,6 +7,15 @@ GIT
       spree_core
 
 GIT
+  remote: https://github.com/gbriyad/spree_admin_roles_and_access.git
+  revision: 6c6d43ff1e8a5d56f464ce3033d3b6a2b47f6cd2
+  branch: 4-1-stable
+  specs:
+    spree_admin_roles_and_access (3.pre.0.pre.stable)
+      spree_auth_devise
+      spree_core (>= 4.0.0)
+
+GIT
   remote: https://github.com/gbriyad/spree_sales.git
   revision: 70360a1a4de095ddec19eb4b457e1da9196ef00a
   branch: 4-0-stable
@@ -433,6 +442,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spree (~> 4.1)
+  spree_admin_roles_and_access!
   spree_auth_devise (~> 4.1)
   spree_gateway (~> 3.7)
   spree_html_invoice!

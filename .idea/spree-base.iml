@@ -138,6 +138,7 @@
     <orderEntry type="library" scope="PROVIDED" name="select2-rails (v3.5.10, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v3.142.7, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spree (v4.1.8, rbenv: 2.7.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spree_admin_roles_and_access (v3.pre.0.pre.stable@6c6d43, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spree_api (v4.1.8, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spree_auth_devise (v4.2.0, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spree_backend (v4.1.8, rbenv: 2.7.1) [gem]" level="application" />
