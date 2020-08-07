@@ -34,7 +34,7 @@
     </div>
   <% end %>
 
-  <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%- if defined?(devise_mapping) && devise_mapping.confirmable? && controller_name != 'confirmations' %>
     <div class="text-center mb-4">
       <%= link_to t('devise.confirmation.did_not_received_confirmation'), new_confirmation_path(resource_name) %><br />
     </div>
