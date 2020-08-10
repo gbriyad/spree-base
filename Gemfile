@@ -33,6 +33,8 @@ gem 'dotenv-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'fastimage'
+
 # Spree
 gem 'spree', '~> 4.1'
 gem 'spree_auth_devise', '~> 4.1'
