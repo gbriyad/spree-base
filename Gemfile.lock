@@ -16,6 +16,17 @@ GIT
       spree_core (>= 4.0.0)
 
 GIT
+  remote: https://github.com/gbriyad/spree_related_products.git
+  revision: e2a64fbfcde045ba94f541a405f6523a0d03c802
+  branch: master
+  specs:
+    spree_related_products (3.3.0)
+      deface (~> 1.0)
+      spree_backend (>= 3.1.0, < 5.0)
+      spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+
+GIT
   remote: https://github.com/gbriyad/spree_sales.git
   revision: 70360a1a4de095ddec19eb4b457e1da9196ef00a
   branch: 4-0-stable
@@ -448,6 +459,7 @@ DEPENDENCIES
   spree_auth_devise (~> 4.1)
   spree_gateway (~> 3.7)
   spree_html_invoice!
+  spree_related_products!
   spree_sales!
   spring
   spring-watcher-listen (~> 2.0.0)
