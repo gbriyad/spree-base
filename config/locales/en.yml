@@ -36,6 +36,8 @@ en:
       resend_confirmation_email: Resend confirmation email
       resend: Resend
   spree:
+    homepage:
+      offers: OFFERS
     order_mailer:
       store_owner_notification_email:
         heading: New Order Received

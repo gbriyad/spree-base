@@ -86,7 +86,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-6">
-      <%= link_to spree.nested_taxons_path('streetstyle') do %>
+      <%= link_to spree.nested_taxons_path('offers') do %>
         <div class="homepage-bottom-box text-center mb-3">
           <img class="w-100 lazyload"
             data-src="<%= asset_path('homepage/promo_banner_left.jpg') %>"
@@ -98,7 +98,7 @@
               <%= Spree.t('homepage.new_collection') %>
             </div>
             <div class="homepage-bottom-box-inner-big-text">
-              <%= Spree.t('homepage.streetstyle') %>
+              <%= Spree.t('homepage.offers') %>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@
     </div>
 
     <div class="col-12 col-lg-6">
-      <%= link_to spree.nested_taxons_path('summer-sale') do %>
+      <%= link_to spree.nested_taxons_path('sale') do %>
         <div class="homepage-bottom-box text-center mb-3">
           <img class="w-100 lazyload"
             data-src="<%= asset_path('homepage/promo_banner_right.jpg') %>"
