@@ -41,7 +41,7 @@ gem 'spree_auth_devise', '~> 4.1'
 gem 'spree_gateway', '~> 3.7'
 
 gem 'spree_html_invoice', git: 'https://github.com/gbriyad/spree-html-invoice', branch: '4_1_stable'
-gem 'spree_sales', github: 'gbriyad/spree_sales', branch: '4-0-stable'
+gem 'spree_sales', github: 'gbriyad/spree_sales', branch: '4-1-stable'
 gem 'spree_admin_roles_and_access', github: 'gbriyad/spree_admin_roles_and_access', branch: '4-1-stable'
 gem 'spree_related_products', github: 'gbriyad/spree_related_products', branch: 'master'
 
