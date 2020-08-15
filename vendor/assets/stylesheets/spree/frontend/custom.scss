@@ -3,7 +3,16 @@
 }
 .product-component-original-price{
     font-weight: normal;
-    //color: lightgray;
+    font-size: .7rem;
+}
+.add-to-cart-form-original-price{
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+    .product-component-original-price{
+        font-size: 1rem;
+    }
 }
 #custom_taxonomies{
     a{
