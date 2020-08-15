@@ -1,0 +1,14 @@
+<% if current_level.children.size > 0 %>
+  <li class="dropdown-item dropdown-submenu">
+    <%= link_to current_level.name, seo_url(current_level), class: "dropdown-toggle w-100"%>
+    <ul class="dropdown-menu mr-2 r-100 ">
+      <% current_level.children.each do |next_level| %>
+        <%= render 'spree/shared/custom_nested_submenu', current_level: next_level %>
+      <% end %>
+    </ul>
+  </li>
+<% else %>
+  <li class="dropdown-item">
+    <%= link_to(current_level.name, seo_url(current_level), class: "w-100") %>
+  </li>
+<% end %>
