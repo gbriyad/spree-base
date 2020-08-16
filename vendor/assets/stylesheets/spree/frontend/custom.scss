@@ -1,3 +1,20 @@
+#home{
+    .category-deck{
+        .category-card{
+            background-color: #F45A4E;
+            .card-title{
+                color: white;;
+            }
+        }
+        .category-card:hover{
+            border: white;
+            background-color: #F45A4E;
+            .card-title{
+                color: white;;
+            }
+        }
+    }
+}
 .email-confirmation{
     margin-bottom: 8rem;
 }

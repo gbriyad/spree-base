@@ -1,0 +1,27 @@
+<% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
+<%# show only the 1st positioned taxonomy %>
+<% if @taxonomies.size > 0  && taxonomy = @taxonomies.find_by(position: 1)%>
+  <div class="container">
+    <div class="row category-deck">
+      <% category_taxon = taxonomy&.root&.children[0] %>
+      <% category_taxon&.children&.each do |taxon| %>
+        <%= link_to seo_url(taxon), class: "col-12 col-lg-6 col-md-6" do%>
+          <div class="category-card shadow m-1 mt-4 rounded border">
+            <% if taxon.icon&.attachment %>
+              <div class="">
+                <%= lazy_image(
+                        src: main_app.url_for(taxon.icon.attachment.variant(gravity: 'center', resize: '555x150^', extent: '555x150')),
+                        alt: taxon.description || Spree.t('taxon_missing_alt'),
+                        width: 370,
+                        height: 100,
+                        class: 'w-100'
+                    ) %>
+              </div>
+            <% end %>
+            <h5 class="card-title text-center mt-2"><%= taxon.name %></h5>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
