@@ -6,7 +6,7 @@
       <% category_taxon = taxonomy&.root&.children[0] %>
       <% category_taxon&.children&.each do |taxon| %>
         <%= link_to seo_url(taxon), class: "col-12 col-lg-6 col-md-6" do%>
-          <div class="category-card shadow m-1 mt-4 rounded border">
+          <div class="category-card shadow m-1 mt-4 border">
             <% if taxon.icon&.attachment %>
               <div class="">
                 <%= lazy_image(

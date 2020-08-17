@@ -1,7 +1,9 @@
+@import "spree/frontend/variables/variables";
 #home{
     .category-deck{
         .category-card{
-            background-color: #F45A4E;
+            background-color: $primary-color;
+            transition: all 0.5s ease;
             .card-title{
                 color: white;
                 font-size: .75rem;
@@ -9,20 +11,28 @@
             }
         }
         .category-card:hover{
-            background-color: #f2382a;
             -webkit-transform: scale(1.05);
             -moz-transform: scale(1.05);
             -ms-transform: scale(1.05);
             -o-transform: scale(1.05);
             transform: scale(1.05);
             .card-title{
-
+                text-decoration: none;
             }
         }
     }
 }
-.homepage-hero-image .hero-content{
-    bottom: 20%;
+.homepage-hero-image {
+    .hero-content{
+        position: unset;
+        right: unset;
+    }
+}
+.mobile-navigation-list-item, .mobile-navigation-sublist-item{
+    padding: 10px 0;
+}
+.horizontal-divider{
+    border-color: $primary-color;
 }
 .mobile-navigation{
     width: 70%;

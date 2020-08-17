@@ -2,11 +2,10 @@
 
 <div class="homepage-hero-image mb-3 position-relative">
   <img class="lazyload hero-image position-absolute"
-    data-src="<%= asset_path('homepage/main_banner.jpg') %>"
-    data-srcset="<%= image_source_set('homepage/main_banner') %>"
+    data-src="<%= asset_path('homepage/main_banner.png') %>"
     alt="<%= Spree.t('homepage.summer_collection')%>" />
 
-  <div class="hero-content">
+  <div class="hero-content text-center">
     <div class="homepage-hero-image-text mb-2 mx-auto pb-3 pb-md-4">
       <%#= Spree.t('homepage.summer_collection') %>
     </div>
@@ -15,6 +14,8 @@
     </div>
   </div>
 </div>
+
+<!--<hr class="horizontal-divider"/>-->
 
 <%= render 'spree/shared/custom_category_cards'%>
 
