@@ -3,17 +3,26 @@
         .category-card{
             background-color: #F45A4E;
             .card-title{
-                color: white;;
+                color: white;
+                font-size: .75rem;
+                font-weight: bold;
             }
         }
         .category-card:hover{
-            border: white;
-            background-color: #F45A4E;
+            background-color: #f2382a;
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -o-transform: scale(1.05);
+            transform: scale(1.05);
             .card-title{
-                color: white;;
+
             }
         }
     }
+}
+.mobile-navigation{
+    width: 70%;
 }
 .email-confirmation{
     margin-bottom: 8rem;
@@ -27,6 +36,16 @@
     font-size: 1.2rem;
 }
 @media (min-width: 768px) {
+    #home{
+        .category-deck{
+            .category-card{
+                .card-title{
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
     .product-component-original-price{
         font-size: 1rem;
     }
