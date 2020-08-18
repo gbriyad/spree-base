@@ -17,6 +17,16 @@
                         class: 'w-100'
                     ) %>
               </div>
+            <% else %>
+              <div class="">
+                <%= lazy_image(
+                        src: asset_path('noimage/category_banner_plp.jpg'),
+                        alt: taxon.description || Spree.t('taxon_missing_alt'),
+                        width: 370,
+                        height: 100,
+                        class: 'w-100'
+                    ) %>
+              </div>
             <% end %>
             <h5 class="card-title text-center mt-2"><%= taxon.name %></h5>
           </div>
