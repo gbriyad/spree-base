@@ -1,9 +1,13 @@
 <% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
 <%# show only the 1st positioned taxonomy %>
 <% if @taxonomies.size > 0  && taxonomy = @taxonomies.find_by(position: 1)%>
+  <% category_taxon = taxonomy&.root&.children[0] %>
   <div class="container">
+    <p class="font-weight-bold text-center homepage-carousel-text text-uppercase">
+      <%= category_taxon.name %>
+    </p>
     <div class="row category-deck">
-      <% category_taxon = taxonomy&.root&.children[0] %>
+
       <% category_taxon&.children&.each do |taxon| %>
         <%= link_to seo_url(taxon), class: "col-12 col-lg-6 col-md-6" do%>
           <div class="category-card shadow m-1 mt-4 border">
@@ -12,8 +16,8 @@
                 <%= lazy_image(
                         src: main_app.url_for(taxon.icon.attachment.variant(gravity: 'center', resize: '555x150^', extent: '555x150')),
                         alt: taxon.description || Spree.t('taxon_missing_alt'),
-                        width: 370,
-                        height: 100,
+                        width: 555,
+                        height: 150,
                         class: 'w-100'
                     ) %>
               </div>
@@ -22,8 +26,8 @@
                 <%= lazy_image(
                         src: asset_path('noimage/category_banner_plp.jpg'),
                         alt: taxon.description || Spree.t('taxon_missing_alt'),
-                        width: 370,
-                        height: 100,
+                        width: 555,
+                        height: 150,
                         class: 'w-100'
                     ) %>
               </div>

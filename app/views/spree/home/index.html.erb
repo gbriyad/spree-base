@@ -17,6 +17,9 @@
 
 <!--<hr class="horizontal-divider"/>-->
 
+<% slides = Spree::Slide.published.image_slides.location("after-main-banner") %>
+<%= render partial: 'spree/shared/custom_slider', locals: { slider: slides } %>
+
 <%= render 'spree/shared/custom_category_cards'%>
 
 <div data-product-carousel data-product-carousel-taxon-id='bestsellers' class="my-3"></div>
