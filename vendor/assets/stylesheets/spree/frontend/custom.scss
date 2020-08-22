@@ -1,5 +1,8 @@
 @import "spree/frontend/variables/variables";
 #home{
+    .homepage-category-text{
+        margin-bottom: -.75rem;
+    }
     .category-deck{
         .category-card{
             background-color: $primary-color;

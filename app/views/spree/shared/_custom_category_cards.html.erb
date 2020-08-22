@@ -3,7 +3,7 @@
 <% if @taxonomies.size > 0  && taxonomy = @taxonomies.find_by(position: 1)%>
   <% category_taxon = taxonomy&.root&.children[0] %>
   <div class="container">
-    <p class="font-weight-bold text-center homepage-carousel-text text-uppercase">
+    <p class="font-weight-bold text-center homepage-carousel-text text-uppercase homepage-category-text">
       <%= category_taxon.name %>
     </p>
     <div class="row category-deck">
