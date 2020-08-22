@@ -1,4 +1,7 @@
 @import "spree/frontend/variables/variables";
+.carousel-control-prev, .carousel-control-next{
+    width: 4%;
+}
 #home{
     .homepage-category-text{
         margin-bottom: -.75rem;
