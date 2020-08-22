@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-md-2">
+    <%= f.field_container :position do %>
+      <%= f.label :position, t(:position) %>
+      <%= f.number_field :position, class: 'fullwidth form-control' %>
+    <% end %>
+  </div>
+
+  <div class="col-md-10">
+    <div class="field checkbox">
+      <label>
+        <%= f.check_box :published, class: "form-control" %>
+        <%= t(:published) %>
+      </label>
+    </div>
+  </div>
+
+  <div class="col-md-12 d-none">
+    <%= f.field_container :product_id do %>
+      <%= label_tag :product_id, t(:product) %><br>
+      <%= hidden_field_tag 'slide[product_id]', f.object.product_id.to_s, class: "product_picker fullwidth" %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :name do %>
+      <%= f.label :name, t(:name) %><br>
+      <%= f.text_field :name, class: 'fullwidth form-control', placeholder: t('spree_slider.placeholder_name') %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :link_url do %>
+      <%= f.label :link_url, t(:link_url) %><br>
+      <%= f.text_field :link_url, class: 'fullwidth form-control', placeholder: t('spree_slider.placeholder_link_url') %>
+    <% end %>
+  </div>
+
+  <div class="col-md-12">
+    <%= f.field_container :body do %>
+      <%= f.label :body, t(:body) %><br>
+      <%= f.text_area :body, {cols: 60, rows: 4, class: 'fullwidth form-control'} %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :image do %>
+      <%= f.label :image, t(:image) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br>
+      <%= f.file_field :image %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :image do %>
+      <% if f.object.image.attached? %>
+        <p>
+          <%= label_tag t(:preview) %>
+          <br>
+          <%= image_tag main_app.url_for(f.object.thumbnail), class: 'img-responsive' %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6 mt-4 bg-light">
+    <%= render 'spree/admin/slides/edit_slider_locations', f: f %>
+  </div>
+
+</div>

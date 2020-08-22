@@ -17,12 +17,15 @@
 
 <!--<hr class="horizontal-divider"/>-->
 
-<% slides = Spree::Slide.published.image_slides.location("after-main-banner") %>
-<%= render partial: 'spree/shared/custom_slider', locals: { slider: slides } %>
+<%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-main-banner-section") } %>
 
 <%= render 'spree/shared/custom_category_cards'%>
 
+<%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-category-section") } %>
+
 <div data-product-carousel data-product-carousel-taxon-id='bestsellers' class="my-3"></div>
+
+<%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-bestsellers-section") } %>
 
 <!--<div class="homepage-fashion-trends-box mb-3">-->
 <!--  <div class="text-center">-->
@@ -37,6 +40,8 @@
 
 
 <div data-product-carousel data-product-carousel-taxon-id='trending' class="mb-3"></div>
+
+<%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-trending-section") } %>
 
 <!--<div class="container">-->
 <!--  <div class="row">-->

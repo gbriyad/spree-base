@@ -10,7 +10,7 @@ Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
 # create Relation Type for related product
-Spree::RelationType.create(name: 'Related Product', applies_to: 'Spree::Product')
+Spree::RelationType.find_or_create_by(name: 'Related Product', applies_to: 'Spree::Product')
 
 #taxonomy creation
 taxonomies = [
@@ -31,3 +31,9 @@ categories_taxon = Spree::Taxon.where(name: I18n.t('spree.taxonomy_categories_na
   taxon.taxonomy = categories
   taxon.save!
 end
+
+#slider location creation
+Spree::SlideLocation.find_or_create_by(name: 'after-main-banner-section')
+Spree::SlideLocation.find_or_create_by(name: 'after-category-section')
+Spree::SlideLocation.find_or_create_by(name: 'after-bestsellers-section')
+Spree::SlideLocation.find_or_create_by(name: 'after-trending-section')

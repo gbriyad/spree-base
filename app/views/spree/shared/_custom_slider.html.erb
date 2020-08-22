@@ -2,7 +2,7 @@
 <% if slider.size > 0 %>
   <%# generate a random number for the carousel id - in case you want multiple per page %>
   <% cid ||= Random.rand(1000) %>
-  <div class="container">
+  <div class="container my-4">
     <div id="carousel-slider-<%= cid %>" class="carousel slide" data-ride="carousel" <%= (defined? interval) != nil ? "data-interval=#{interval.to_s}" : "" %>>
       <%# Indicators %>
       <ol class="carousel-indicators">
