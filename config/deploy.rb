@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "bazarshodai"
-set :repo_url, "git@github.com:gbriyad/spree-base.git"
+set :repo_url, "https://github.com/gbriyad/spree-base"
 set :branch, "spree-grocery"
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads', 'storage'
