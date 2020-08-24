@@ -6,7 +6,7 @@ ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
+# gem 'mysql2', '>= 0.4.4'
 # pg for heroku deploy free
 gem 'pg'
 # Use Puma as the app server
