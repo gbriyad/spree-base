@@ -5,6 +5,9 @@ namespace :deploy do
         unless test("[ -f #{shared_path}/config/master.key ]")
           upload! 'config/master.key', "#{shared_path}/config/master.key"
         end
+        unless test("[ -f #{shared_path}/.env ]")
+          upload! '.env', "#{shared_path}/.env"
+        end
       end
     end
   end
