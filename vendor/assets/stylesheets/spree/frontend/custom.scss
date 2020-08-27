@@ -45,6 +45,14 @@
 }
 .mobile-navigation{
     width: 70%;
+    font-size: .75rem;
+
+    .header-spree-fluid-logo img {
+        max-height: 24px;
+    }
+    svg{
+        max-height: 12px;
+    }
 }
 .email-confirmation{
     margin-bottom: 8rem;
@@ -57,21 +65,7 @@
     font-weight: normal;
     font-size: 1.2rem;
 }
-@media (min-width: 768px) {
-    #home{
-        .category-deck{
-            .category-card{
-                .card-title{
-                    font-size: 1.25rem;
-                    font-weight: normal;
-                }
-            }
-        }
-    }
-    .product-component-original-price{
-        font-size: 1rem;
-    }
-}
+
 #custom_taxonomies{
     a{
         text-transform: uppercase;
@@ -139,4 +133,28 @@
     }
 }
 
-
+@media (min-width: 768px) {
+    #home{
+        .category-deck{
+            .category-card{
+                .card-title{
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    .product-component-original-price{
+        font-size: 1rem;
+    }
+    .mobile-navigation{
+        width: 40%;
+        font-size: 1.2rem;
+        svg{
+            max-height: 16px;
+        }
+        .header-spree-fluid-logo img {
+            max-height: 32px;
+        }
+    }
+}
