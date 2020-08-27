@@ -20,7 +20,7 @@
               <% if slide.slide_image %>
                 <div class="">
                   <%= lazy_image(
-                          src: main_app.url_for(slide.slide_image.variant(gravity: 'center', resize: '1110x300^', extent: '1110x300')),
+                          src: main_app.url_for(slide.slide_image.variant(gravity: 'center', resize: '1110x300^', extent: '1110x300').processed),
                           alt: slide.slide_name || Spree.t('taxon_missing_alt'),
                           width: 1110,
                           height: 300,

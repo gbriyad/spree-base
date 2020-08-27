@@ -23,7 +23,7 @@ module Spree
       attachment.variant(gravity: WATERMARK_GRAVITY,
                          resize: resize_value,
                          draw: draw_value
-      )
+      ).processed
     end
   end
 end
