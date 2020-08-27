@@ -1,6 +1,9 @@
 @import "spree/frontend/variables/variables";
 .carousel-control-prev, .carousel-control-next{
-    width: 4%;
+    width: 8%;
+}
+.carousel-indicators{
+    margin-bottom:0;
 }
 #home{
     .homepage-category-text{
