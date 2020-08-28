@@ -47,11 +47,34 @@
     width: 70%;
     font-size: .75rem;
 
-    .header-spree-fluid-logo img {
-        max-height: 24px;
+    .header-spree{
+        background: $primary-color;
+        color: white;
+        border-color: #e2e2e2 !important;
+        height: 50px;
+        .header-spree-fluid-logo img {
+            max-height: 24px;
+        }
+        svg{
+            color: white;
+        }
     }
     svg{
         max-height: 12px;
+    }
+    .category-icon{
+        padding-right: .6rem;
+        img{
+            border-radius: 50%;
+            max-width: 24px;
+        }
+    }
+    .search-form{
+        border: 1px solid $primary-color;
+        width: 99%;
+        input{
+            font-size: .8rem !important;
+        }
     }
 }
 .email-confirmation{
@@ -133,6 +156,11 @@
     }
 }
 
+.footer-spree .logo img {
+    height: auto;
+    max-width: 80px;
+}
+
 @media (min-width: 768px) {
     #home{
         .category-deck{
@@ -155,6 +183,17 @@
         }
         .header-spree-fluid-logo img {
             max-height: 32px;
+        }
+        .category-icon{
+            padding-right: .8rem;
+            img{
+                max-width: 35px;
+            }
+        }
+        .search-form{
+            input{
+                font-size: 1.2rem !important;
+            }
         }
     }
 }

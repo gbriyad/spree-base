@@ -19,7 +19,7 @@
             </button>
           </div>
           <figure class="logo flex-grow-0 flex-xl-grow-1 order-xl-0 header-spree-fluid-logo" data-hook>
-            <%= logo %>
+            <%= logo('ecommerce-logo-white.png') %>
           </figure>
           <div id="top-nav-bar-mobile" class="text-right flex-grow-1 header-spree-fluid-secondary-navigation" data-hook>
             <button id="mobile-navigation-close-button" aria-label="<%= Spree.t('nav_bar.close_menu') %>">
@@ -38,9 +38,42 @@
     </div>
 
     <ul class="list-unstyled position-relative h-100 mobile-navigation-list">
+      <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+
+          <%= form_tag spree.products_path, method: :get, class: "form search-form" do %>
+            <%= search_field_tag :keywords,
+                                 params[:keywords],
+                                 placeholder: Spree.t(:search),
+                                 autofocus: true,
+                                 class: "border-0 p-2 w-100"
+            %>
+          <% end %>
+
+      </li>
       <% taxonomy.root.children.each do |level_1| %>
         <% cache [I18n.locale, level_1] do %>
           <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+            <% if level_1.icon&.attachment %>
+              <div class="category-icon">
+                <%= lazy_image(
+                        src: main_app.url_for(level_1.icon.attachment.variant(gravity: 'center', resize: '35x35^', extent: '35x35').processed),
+                        alt: level_1.description || Spree.t('taxon_missing_alt'),
+                        width: 24,
+                        height: 24,
+                        class: 'w-100'
+                    ) %>
+              </div>
+            <% else %>
+              <div class="category-icon">
+                <%= lazy_image(
+                        src: asset_path('ecommerce-logo.png'),
+                        alt: level_1.description || Spree.t('taxon_missing_alt'),
+                        width: 24,
+                        height: 24,
+                        class: 'w-100'
+                    ) %>
+              </div>
+            <% end %>
             <%= link_to level_1.name, seo_url(level_1), class: 'w-75' %>
 
             <% if level_1.children.size > 0 %>
@@ -54,6 +87,8 @@
                         width: 14,
                         height: 27) %>
               </a>
+            <% else %>
+              <div class="w-25"></div>
             <% end %>
 
             <ul class="list-unstyled position-absolute mobile-navigation-sublist" data-category="<%= level_1.name.parameterize %>">

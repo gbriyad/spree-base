@@ -1,5 +1,26 @@
 <%# repeat code starts %>
 <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+  <% if current_level.icon&.attachment %>
+    <div class="category-icon">
+      <%= lazy_image(
+              src: main_app.url_for(current_level.icon.attachment.variant(gravity: 'center', resize: '35x35^', extent: '35x35').processed),
+              alt: current_level.description || Spree.t('taxon_missing_alt'),
+              width: 24,
+              height: 24,
+              class: 'w-100'
+          ) %>
+    </div>
+  <% else %>
+    <div class="category-icon">
+      <%= lazy_image(
+              src: asset_path('ecommerce-logo.png'),
+              alt: current_level.description || Spree.t('taxon_missing_alt'),
+              width: 24,
+              height: 24,
+              class: 'w-100'
+          ) %>
+    </div>
+  <% end %>
   <%= link_to current_level.name, seo_url(current_level), class: 'w-75' %>
 
   <% if current_level.children.size > 0 %>
@@ -13,6 +34,8 @@
                width: 14,
                height: 27) %>
     </a>
+  <% else %>
+    <div class="w-25"></div>
   <% end %>
 
   <ul class="list-unstyled position-absolute mobile-navigation-sublist" data-category="<%= current_level.name.parameterize %>">
