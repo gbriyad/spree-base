@@ -5,7 +5,7 @@ set :application, "bazarshodai"
 set :repo_url, "https://github.com/gbriyad/spree-base"
 set :branch, "spree-grocery"
 
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads', 'storage'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads', 'public/storage'
 append :linked_files,'config/master.key', 'config/credentials/production.key', 'config/credentials/test.key'
 
 # Only keep the last 5 releases to save disk space

@@ -14,7 +14,7 @@
             <% if taxon.icon&.attachment %>
               <div class="">
                 <%= lazy_image(
-                        src: main_app.url_for(taxon.icon.attachment.variant(gravity: 'center', resize: '555x150^', extent: '555x150').processed),
+                        src: generate_public_url(taxon.icon.attachment.variant(gravity: 'center', resize: '555x150^', extent: '555x150').processed),
                         alt: taxon.description || Spree.t('taxon_missing_alt'),
                         width: 555,
                         height: 150,
