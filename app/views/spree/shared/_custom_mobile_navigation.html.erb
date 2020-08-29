@@ -56,7 +56,7 @@
             <% if level_1.icon&.attachment %>
               <div class="category-icon">
                 <%= lazy_image(
-                        src: main_app.url_for(level_1.icon.attachment.variant(gravity: 'center', resize: '35x35^', extent: '35x35').processed),
+                        src: generate_public_url(level_1.icon.attachment.variant(gravity: 'center', resize: '35x35^', extent: '35x35').processed),
                         alt: level_1.description || Spree.t('taxon_missing_alt'),
                         width: 24,
                         height: 24,
