@@ -29,5 +29,15 @@ module SpreeBase
     # the framework and any gems in your application.
 
     config.time_zone='Dhaka'
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        address:              Rails.application.credentials.email[:address],
+        port:                 587,
+        domain:               Rails.application.credentials.email[:domain],
+        user_name:            Rails.application.credentials.email[:username],
+        password:             Rails.application.credentials.email[:password],
+        authentication:       'plain',
+        enable_starttls_auto: true }
   end
 end

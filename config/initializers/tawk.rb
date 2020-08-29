@@ -1,3 +1,3 @@
 TawkRails.configure do |config|
-  config.id_site = ENV['TAWK_ID_SITE']
+  config.id_site = Rails.application.credentials.tawk[:id]
 end

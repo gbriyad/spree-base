@@ -10,12 +10,12 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  host : <%= ENV['SPREE_BASE_DATABASE_HOST'] %>
+  host : <%= Rails.application.credentials.db[:host] %>
   adapter: postgresql
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV['SPREE_BASE_DATABASE_USERNAME'] %>
-  password: <%= ENV['SPREE_BASE_DATABASE_PASSWORD'] %>
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
 
 development:
   <<: *default
@@ -27,6 +27,8 @@ development:
 test:
   <<: *default
   database: bazarshodai_test
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -50,5 +52,5 @@ test:
 production:
   <<: *default
   database: bazarshodai_production
-  username: <%= ENV['SPREE_BASE_DATABASE_USERNAME'] %>
-  password: <%= ENV['SPREE_BASE_DATABASE_PASSWORD'] %>
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
