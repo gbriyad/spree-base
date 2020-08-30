@@ -30,12 +30,21 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    models:
+      spree/state:
+        one: Area
+        other: Areas
   devise:
     confirmation:
       did_not_received_confirmation: Didn't receive confirmation e-mail?
       resend_confirmation_email: Resend confirmation email
       resend: Resend
   spree:
+    states: Areas
+    new_state: New Area
+    state_based: Area Based
+    state: Area
     homepage:
       offers: OFFERS
     order_mailer:
