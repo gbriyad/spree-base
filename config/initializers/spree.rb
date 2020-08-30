@@ -38,7 +38,7 @@ Spree.dependencies do |dependencies|
   # dependencies.cart_add_item_service = 'MyNewAwesomeService'
 end
 
-Spree::PermittedAttributes.store_attributes << :phone
+Spree::PermittedAttributes.store_attributes << [:phone, :contact_email, :address, :order_notification_email]
 
 Spree.user_class = "Spree::User"
 Spree::Auth::Config[:confirmable] = true

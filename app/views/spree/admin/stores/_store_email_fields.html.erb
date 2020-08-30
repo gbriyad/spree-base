@@ -1,0 +1,5 @@
+<%= f.field_container :order_notification_email, class: ['form-group'] do %>
+  <%= f.label :order_notification_email, raw(Spree.t(:order_notification_email) + required_span_tag) %>
+  <%= f.text_field :order_notification_email, class: 'form-control', required: true %>
+  <%= f.error_message_on :order_notification_email %>
+<% end %>

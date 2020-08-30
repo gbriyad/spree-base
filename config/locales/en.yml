@@ -41,6 +41,10 @@ en:
       resend_confirmation_email: Resend confirmation email
       resend: Resend
   spree:
+    phone: Phone
+    contact_email: Contact Email
+    address: Address
+    order_notification_email: Order Notification Email
     states: Areas
     new_state: New Area
     state_based: Area Based

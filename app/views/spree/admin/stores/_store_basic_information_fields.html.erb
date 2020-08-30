@@ -1,0 +1,17 @@
+<%= f.field_container :phone, class: ['form-group'] do %>
+  <%= f.label :phone, raw(Spree.t(:phone) + required_span_tag) %>
+  <%= f.text_field :phone, class: 'form-control', required: true %>
+  <%= f.error_message_on :phone %>
+<% end %>
+
+<%= f.field_container :contact_email, class: ['form-group'] do %>
+  <%= f.label :contact_email, raw(Spree.t(:contact_email) + required_span_tag) %>
+  <%= f.text_field :contact_email, class: 'form-control', required: true %>
+  <%= f.error_message_on :contact_email %>
+<% end %>
+
+<%= f.field_container :address, class: ['form-group'] do %>
+  <%= f.label :address, raw(Spree.t(:address) + required_span_tag) %>
+  <%= f.text_area :address, class: 'form-control', required: true %>
+  <%= f.error_message_on :address %>
+<% end %>

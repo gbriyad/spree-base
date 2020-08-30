@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_172139) do
+ActiveRecord::Schema.define(version: 2020_08_30_160645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1075,6 +1075,9 @@ ActiveRecord::Schema.define(version: 2020_08_19_172139) do
     t.string "twitter"
     t.string "instagram"
     t.string "phone"
+    t.string "contact_email"
+    t.string "order_notification_email"
+    t.text "address"
     t.index "lower((code)::text)", name: "index_spree_stores_on_lower_code", unique: true
     t.index ["default"], name: "index_spree_stores_on_default"
     t.index ["url"], name: "index_spree_stores_on_url"
