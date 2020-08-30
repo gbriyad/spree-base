@@ -32,13 +32,12 @@
           </div>
           <div class="d-flex flex-column align-items-center align-items-xl-start pb-3 flex-grow-2 footer-spree-contact-note">
             <div>
-              <%= current_store.name %>,
-              House: 15, Road: 8A
-              Dhanmondi, Dhaka.
+              <%= current_store&.name %>,
+              <%= current_store&.address %>
             </div>
             <div>Call us now: <%= current_store&.phone %></div>
-            <% if current_store.mail_from_address %>
-              <div><%= Spree.t(:email) %>: <%= current_store.mail_from_address %></div>
+            <% if current_store&.contact_email %>
+              <div><%= Spree.t(:email) %>: <%= current_store&.contact_email %></div>
             <% end %>
           </div>
         </div>
