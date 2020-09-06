@@ -7,6 +7,9 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use mysql as the database for Active Record
 # gem 'mysql2', '>= 0.4.4'
+
+gem 'coffee-rails'
+
 # pg for heroku deploy free
 gem 'pg'
 # Use Puma as the app server
@@ -45,7 +48,7 @@ gem 'spree_sales', github: 'gbriyad/spree_sales', branch: '4-1-stable'
 gem 'spree_admin_roles_and_access', github: 'gbriyad/spree_admin_roles_and_access', branch: '4-1-stable'
 gem 'spree_related_products', github: 'gbriyad/spree_related_products', branch: 'master'
 gem 'spree_slider', github: 'gbriyad/spree_slider', branch: 'spree_4'
-
+gem 'spree_reviews', github: 'gbriyad/spree_reviews', branch: 'spree-v4.0'
 
 # tawk chat system
 gem 'tawk_rails'

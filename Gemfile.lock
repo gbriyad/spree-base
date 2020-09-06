@@ -27,6 +27,16 @@ GIT
       spree_extension
 
 GIT
+  remote: https://github.com/gbriyad/spree_reviews.git
+  revision: 5136f36ef4420bd7dc064031a58e6219de92afef
+  branch: spree-v4.0
+  specs:
+    spree_reviews (3.3.0)
+      spree_auth_devise (>= 3.1.0, < 5.0)
+      spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+
+GIT
   remote: https://github.com/gbriyad/spree_sales.git
   revision: 8efeae33f50c4cedac1ca76ea174eaf40db78aec
   branch: 4-1-stable
@@ -165,6 +175,13 @@ GEM
       activesupport (>= 3.0.0)
     childprocess (3.0.0)
     cldr-plurals-runtime-rb (1.0.1)
+    coffee-rails (5.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 5.2.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     css_parser (1.7.1)
@@ -483,6 +500,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.4)
   capistrano-rbenv (~> 2.1, >= 2.1.4)
   capybara (>= 2.15)
+  coffee-rails
   dotenv-rails
   fastimage
   jbuilder (~> 2.7)
@@ -498,6 +516,7 @@ DEPENDENCIES
   spree_gateway (~> 3.7)
   spree_html_invoice!
   spree_related_products!
+  spree_reviews!
   spree_sales!
   spree_slider!
   spring
