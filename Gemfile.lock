@@ -215,6 +215,8 @@ GEM
     fastimage (2.2.0)
     ffaker (2.16.0)
     ffi (1.13.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     friendly_id (5.3.0)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
@@ -503,6 +505,7 @@ DEPENDENCIES
   coffee-rails
   dotenv-rails
   fastimage
+  font-awesome-rails
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   pg

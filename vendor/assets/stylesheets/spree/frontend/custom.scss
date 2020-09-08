@@ -5,6 +5,16 @@
 .carousel-indicators{
     margin-bottom:0;
 }
+.sub-footer{
+    background-color: #95F44E;
+    color: #484848;
+    .border-right{
+        border-right: 1px solid #484848 !important;
+    }
+}
+//.product-image-discount-tag{
+//    position: absolute;
+//}
 #home{
     .homepage-category-text{
         margin-bottom: -.75rem;

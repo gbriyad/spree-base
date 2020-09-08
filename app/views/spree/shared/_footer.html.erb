@@ -1,5 +1,55 @@
+<div class="container-fluid mt-4 mb-2 sub-footer-container">
+  <div class="row p-2 sub-footer">
+    <div class="col-xl col-md-4 border-right p-2">
+      <div class="pull-left">
+        <i class="fa fa-truck fa-3x fa-fw"></i>
+        <div class="d-inline-block">
+          <div class="footer-spree-label">FREE DELIVERY</div>
+          <div class="footer-spree-contact-note">From 0 BDT</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl col-md-4 border-right p-2">
+      <div class="pull-left">
+        <i class="fa fa-money fa-3x fa-fw"></i>
+        <div class="d-inline-block">
+          <div class="footer-spree-label">CASH ON DELIVERY</div>
+          <div class="footer-spree-contact-note">From 0 BDT</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl col-md-4 border-right p-2">
+      <div class="pull-left">
+        <i class="fa fa-gift fa-3x fa-fw"></i>
+        <div class="d-inline-block">
+          <div class="footer-spree-label">FREE GIFT BOX</div>
+          <div class="footer-spree-contact-note">& Gift Note</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl col-md-4 border-right p-2">
+      <div class="pull-left">
+        <i class="fa fa-phone-square fa-3x fa-fw"></i>
+        <div class="d-inline-block">
+          <div class="footer-spree-label">CONTACT US</div>
+          <div class="footer-spree-contact-note"><%= current_store&.phone %></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl col-md-4 p-2">
+      <div class="pull-left">
+        <i class="fa fa-diamond fa-3x fa-fw"></i>
+        <div class="d-inline-block">
+          <div class="footer-spree-label">LOYALTY</div>
+          <div class="footer-spree-contact-note">Rewarded</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <% cache spree_nav_cache_key('footer') do %>
   <footer id="footer" class="pt-2 mx-auto border-top footer-spree" data-turbolinks-permanent>
+
     <div class="container">
       <div class="row d-xl-flex justify-content-xl-around pb-xl-5">
         <div class="d-flex d-xl-block flex-xl-grow-0 col-xl-4 py-4">
