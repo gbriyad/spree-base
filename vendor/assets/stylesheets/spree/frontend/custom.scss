@@ -90,6 +90,14 @@
             font-size: .8rem !important;
         }
     }
+    .account-section{
+        .spree-btn{
+            font-size: 0.6rem;
+        }
+        .fa{
+            font-size: .75rem;
+        }
+    }
 }
 .email-confirmation{
     margin-bottom: 8rem;
@@ -174,7 +182,18 @@
     height: auto;
     max-width: 80px;
 }
-
+@media (min-width: 390px) {
+    .mobile-navigation{
+        .account-section{
+            .spree-btn{
+                font-size: 0.75rem;
+            }
+            .fa{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
 @media (min-width: 768px) {
     #home{
         .category-deck{
@@ -190,7 +209,7 @@
         font-size: 1rem;
     }
     .mobile-navigation{
-        width: 40%;
+        width: 60%;
         font-size: 1.2rem;
         svg{
             max-height: 16px;
@@ -209,5 +228,18 @@
                 font-size: 1.2rem !important;
             }
         }
+        .account-section{
+            .spree-btn{
+                font-size: 1.2rem;
+            }
+            .fa{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .mobile-navigation{
+        width: 50%;
     }
 }
