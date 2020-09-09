@@ -10,10 +10,10 @@
     font-size: .9rem;
 }
 .sub-footer{
-    background-color: #95F44E;
-    color: #484848;
+    background-color: $primary-color;
+    color: white;
     .border-right{
-        border-right: 1px solid #484848 !important;
+        border-right: none !important;
     }
 }
 //.product-image-discount-tag{
@@ -195,6 +195,11 @@
     }
 }
 @media (min-width: 768px) {
+    .sub-footer{
+        .border-right{
+            border-right: 1px solid white !important;
+        }
+    }
     #home{
         .category-deck{
             .category-card{
