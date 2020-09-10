@@ -29,6 +29,7 @@
       <% if default_variant.on_sale? %>
         <div class="text-center text-md-left">
           <del class="add-to-cart-form-original-price"><%= Spree::Money.new(default_variant.original_price, currency: current_currency) %></del>
+          <span class="font-weight-bold text-center pl-2 pr-2 pt-1 pb-1 product-discount-tag"><%= product_discount_percentage(default_variant)%></span>
         </div>
       <% end %>
       <div id="product-price" class="mb-2 text-center text-md-left add-to-cart-form-price" data-hook="product_price">
