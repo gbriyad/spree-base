@@ -16,9 +16,13 @@
         border-right: none !important;
     }
 }
-//.product-image-discount-tag{
-//    position: absolute;
-//}
+.product-image-discount-tag{
+    position: absolute;
+    background-color: $primary-color;
+    color: white;
+    width: 25%;
+    font-size: .75rem;
+}
 #home{
     .homepage-category-text{
         margin-bottom: -.75rem;
@@ -241,6 +245,9 @@
                 font-size: 1.5rem;
             }
         }
+    }
+    .product-image-discount-tag{
+        font-size: 1rem;
     }
 }
 @media (min-width: 992px) {

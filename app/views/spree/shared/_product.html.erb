@@ -2,10 +2,12 @@
 <%= link_to url, class: 'h-100 d-flex flex-column justify-content-between' do %>
   <% cache [common_product_cache_keys, product] do %>
     <%= plp_and_carousel_image(product, image_class) %>
-<!--    <svg class="product-image-discount-tag">-->
-<!--      <circle cx="" cy="" r="22%" fill="#F45A4E"></circle>-->
-<!--      <text x="2" y="17%" fill="white" class="font-weight-bold">-50%</text>-->
-<!--    </svg>-->
+    <% if product.on_sale? %>
+      <div class="product-image-discount-tag">
+        <div class="font-weight-bold text-center p-1"><%= product_discount_percentage(product)%></div>
+      </div>
+    <% end %>
+
     <div>
       <div class="product-component-name" title="<%= product.name %>">
         <%= product.name %>
