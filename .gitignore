@@ -85,6 +85,7 @@ node_modules/
 
 # Ignore uploaded files in development
 /public/uploads
+/upload-products
 /config/credentials/production.key
 
 /config/credentials/test.key
