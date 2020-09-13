@@ -1,0 +1,34 @@
+<% if try_spree_current_user %>
+  <li class="d-flex justify-content-between align-items-center mt-2 account-section">
+    <%= link_to spree.account_path, class: 'btn btn-primary spree-btn mr-1 mr-1 w-100' do %>
+      <i class="fa fa-user pull-left"></i>
+      <%= try_spree_current_user.email.split('@').first %>
+    <% end if defined?(spree.account_path)%>
+  </li>
+<% end %>
+<li class="d-flex justify-content-between align-items-center mt-2 account-section">
+
+  <% if try_spree_current_user %>
+
+    <%= link_to spree.account_path, class: 'btn btn-primary spree-btn mr-1 mr-1 w-100' do %>
+      <i class="fa fa-truck pull-left"></i>
+      <%= Spree.t('nav_bar.orders') %>
+    <% end if defined?(spree.account_path)%>
+
+    <%= link_to spree_logout_path, class: 'btn btn-primary spree-btn ml-1 mr-1 w-100', method: :get do %>
+      <i class="fa fa-sign-out pull-left"></i>
+      <%= Spree.t('nav_bar.log_out') %>
+    <% end if defined?(spree_signup_path)%>
+
+
+  <% else %>
+    <%= link_to spree_login_path, class: 'btn btn-primary spree-btn mr-1 mr-1 w-100' do %>
+      <i class="fa fa-user-circle pull-left"></i>
+      <%= Spree.t('nav_bar.log_in') %>
+    <% end if defined?(spree_login_path)%>
+    <%= link_to spree_signup_path, class: 'btn btn-primary spree-btn ml-1 mr-1 w-100' do %>
+      <i class="fa fa-user-plus pull-left"></i>
+      <%= Spree.t('nav_bar.sign_up') %>
+    <% end if defined?(spree_signup_path)%>
+  <% end %>
+</li>

@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   # the default of "spree".
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  Spree::Core::Engine.add_routes do
+    get '/mobile_account_link', to: 'store#mobile_account_link', as: :mobile_account_link
+  end
 end
