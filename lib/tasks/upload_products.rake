@@ -1,9 +1,12 @@
 desc 'Upload Products!'
 task :upload_products => :environment do
-  require 'csv'
-  table = CSV.parse(File.read("upload-products/product-list.csv"), headers: true)
+  PRODUCT_LIST_LOCATION= Rails.root.join('upload-products', 'product-list.csv')
+  PRODUCT_IMAGE_LOCATION=Rails.root.join('upload-products','images/')
 
-  PRODUCT_IMAGE_LOCATION='upload-products/images/'
+  require 'csv'
+  table = CSV.parse(File.read(PRODUCT_LIST_LOCATION), headers: true)
+
+
   shipping_category = Spree::ShippingCategory.first
 
   categories = Spree::Taxonomy.find_by!(name: I18n.t('spree.taxonomy_categories_name'))
