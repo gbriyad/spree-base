@@ -11,8 +11,8 @@
 # config.setting_name = 'new value'
 
 Rails.cache.clear
-Spree::Store.touch_all
-Spree::Taxon.touch_all
+Spree::Store.touch_all if ActiveRecord::Base.connection.table_exists? 'spree_stores'
+Spree::Taxon.touch_all if ActiveRecord::Base.connection.table_exists? 'spree_taxons'
 
 Spree.config do |config|
   # Example:
