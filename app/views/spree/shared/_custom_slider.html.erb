@@ -19,8 +19,9 @@
             <%= link_to url_for(slide.slide_link) do %>
               <% if slide.slide_image %>
                 <div class="">
+                  <% slide_image_variant = slide.slide_image.content_type == 'image/gif' ? slide.slide_image : slide.slide_image.variant(gravity: 'center', resize: '1110x300^', extent: '1110x300').processed %>
                   <%= lazy_image(
-                          src: generate_public_url(slide.slide_image.variant(gravity: 'center', resize: '1110x300^', extent: '1110x300').processed),
+                          src: generate_public_url(slide_image_variant),
                           alt: slide.slide_name || Spree.t('taxon_missing_alt'),
                           width: 1110,
                           height: 300,
