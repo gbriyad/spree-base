@@ -1,10 +1,10 @@
 module Spree
   module AssetDecorator
 
-    WATERMARK_PATH = ::Rails.root.join('app', 'assets', 'images', Spree::Config[:logo]).to_s
+    WATERMARK_PATH = ::Rails.root.join('app', 'assets', 'images', "ecommerce-logo-image-overlay.png").to_s
     WATERMARK_WIDTH, WATERMARK_HEIGHT = FastImage.size(WATERMARK_PATH, :raise_on_failure => true)
-    WATERMARK_GRAVITY = 'northeast'
-    WATERMARK_MARGIN = '10,10'
+    WATERMARK_GRAVITY = 'southeast'
+    WATERMARK_MARGIN = '0,10'
 
     #override for adding watermark to product images
     def url(style)
@@ -14,7 +14,7 @@ module Spree
 
       width, _ = resize_value.chop.split('x')
       #resizing watermark width to 10% of the Background image width
-      width = (width.to_i/7)
+      width = (width.to_i/6)
       #resizing watermark height to maintain aspect ratio
       height = ((WATERMARK_HEIGHT * width) / WATERMARK_WIDTH)
 
