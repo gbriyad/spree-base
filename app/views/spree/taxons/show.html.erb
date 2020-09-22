@@ -4,7 +4,16 @@
     <%= render 'header', taxon: @taxon %>
   </div>
   <%= render 'subcategories', taxon: @taxon %>
-  <div data-hook="taxon_products">
-    <%= render template: 'spree/products/index', colors: @colors, sizes: @sizes %>
-  </div>
+
+  <% if @taxon.children.any? %>
+    <div class="sub-category-cards mb-4">
+      <%= render 'spree/shared/custom_sub_category_cards', taxon: @taxon %>
+    </div>
+  <% else %>
+    <div data-hook="taxon_products">
+      <%= render template: 'spree/products/index', colors: @colors, sizes: @sizes %>
+    </div>
+  <% end %>
+
+
 </div>

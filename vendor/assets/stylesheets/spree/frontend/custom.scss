@@ -54,6 +54,31 @@
         }
     }
 }
+
+.sub-category-cards{
+    min-height: 400px;
+    .category-deck{
+        .category-card{
+            background-color: $primary-color;
+            transition: all 0.5s ease;
+            .card-title{
+                color: white;
+                font-size: .75rem;
+                font-weight: bold;
+            }
+        }
+        .category-card:hover{
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -o-transform: scale(1.05);
+            transform: scale(1.05);
+            .card-title{
+                text-decoration: none;
+            }
+        }
+    }
+}
 .homepage-hero-image {
     .hero-content{
         position: unset;
@@ -210,6 +235,16 @@
         }
     }
     #home{
+        .category-deck{
+            .category-card{
+                .card-title{
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    .sub-category-cards{
         .category-deck{
             .category-card{
                 .card-title{
