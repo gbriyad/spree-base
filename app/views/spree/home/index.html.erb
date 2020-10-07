@@ -18,10 +18,10 @@
 <!--<hr class="horizontal-divider"/>-->
 
 <%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-main-banner-section") } %>
-<%= render 'spree/shared/custom_category_cards'%>
-<%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-category-section") } %>
 <div data-product-carousel data-product-carousel-taxon-id='bestsellers' class="my-3"></div>
 <%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-bestsellers-section") } %>
+<%= render 'spree/shared/custom_category_cards'%>
+<%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-category-section") } %>
 <div data-product-carousel data-product-carousel-taxon-id='trending' class="mb-3"></div>
 <%= render partial: 'spree/shared/custom_slider', locals: { slider: Spree::Slide.published.image_slides.location("after-trending-section") } %>
 <%= render partial: 'spree/shared/sub_footer' %>
