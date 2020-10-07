@@ -1,4 +1,7 @@
 @import "spree/frontend/variables/variables";
+.btn-primary{
+    color: white;
+}
 .carousel-control-prev, .carousel-control-next{
     width: 8%;
 }
@@ -150,7 +153,7 @@
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 500;
-        color: gray;
+        color: $header-font-color;
     }
     .dropdown-item{
         a{
